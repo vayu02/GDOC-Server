@@ -20,7 +20,7 @@ mongoose
 
 const io = new SocketIoServer(PORT, {
   cors: {
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173', 'https://gdoc-djmd.onrender.com'],
     methods: ['GET', 'POST'],
   },
 })
