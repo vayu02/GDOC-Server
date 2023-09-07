@@ -4,7 +4,6 @@ import mongoose from 'mongoose'
 import { Server as SocketIoServer } from 'socket.io'
 import Document from './model/Document.js'
 const PORT = process.env.PORT || 6010
-const BASE_URL = process.env.BASE_URL
 
 mongoose
   .connect(process.env.DATABASE_URI, {
