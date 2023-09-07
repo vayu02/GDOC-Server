@@ -23,7 +23,7 @@ const io = new SocketIoServer(PORT, {
     origin: [
       'http://localhost:5173',
       'https://gdoc-djmd.onrender.com',
-      'https://v-gdoc.netlify.app/',
+      'https://v-gdoc.netlify.app',
     ],
     methods: ['GET', 'POST'],
   },
