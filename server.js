@@ -3,7 +3,8 @@ config()
 import mongoose from 'mongoose'
 import { Server as SocketIoServer } from 'socket.io'
 import Document from './model/Document.js'
-const PORT = process.env.PORT || 6010
+
+const PORT = process.env.PORT || 3001
 
 mongoose
   .connect(process.env.DATABASE_URI, {
@@ -19,7 +20,7 @@ mongoose
 
 const io = new SocketIoServer(PORT, {
   cors: {
-    origin: ['http://localhost:5173', 'https://gdoc-djmd.onrender.com'],
+    origin: 'http://localhost:5173',
     methods: ['GET', 'POST'],
   },
 })
