@@ -3,7 +3,7 @@ config()
 import mongoose from 'mongoose'
 import { Server as SocketIoServer } from 'socket.io'
 import Document from './model/Document.js'
-
+const PORT = process.env.PORT || 6010
 const BASE_URL = process.env.BASE_URL
 
 mongoose
@@ -18,7 +18,7 @@ mongoose
     console.error('Error connecting to MongoDB:', err)
   })
 
-const io = new SocketIoServer(3001, {
+const io = new SocketIoServer(PORT, {
   cors: {
     origin: 'http://localhost:5173',
     methods: ['GET', 'POST'],
